@@ -1,0 +1,726 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: red;
+}
+:root {
+  --oakham-red: #a71930;
+}
+/* Mobile First - 1 column display */
+
+#grid-logo {
+  grid-area: logo;
+  display: none;
+}
+#grid-logo img {
+  width: 9.5vw;
+}
+#grid-title {
+  grid-area: title;
+  font-size: 24px;
+  text-align: center;
+  line-height: 40px;
+}
+#grid-topics-l1 {
+  grid-area: year;
+  z-index: 100;
+}
+#grid-topics {
+  grid-area: year;
+  z-index: 100;
+  grid-template-areas:
+    " DL " " DL " " PRG " " PRG " " PRG " " PRG " " wk7 " " wk8 " " DREP " " DREP "
+    " DREP " " DREP " " DREP " " DREP " " DREP " " wk16 " " ALG " " ALG " " ALG " " ALG "
+    " ALG " " wk22 " " FOSIL " " FOSIL " " FOSIL " " FOSIL " " FOSIL " " wk28 " " PROJ " " PROJ "
+    " PROJ " " PROJ " " PROJ " " PROJ " " wk35 " " PROJ2 " " PROJ2 " " PROJ2 " " PROJ2 " " wk40 ";
+}
+#grid-year {
+  grid-area: year;
+  z-index: 1;
+  grid-template-areas:
+    " wk1 " " wk2 " " wk3 " " wk4 " " wk5 " " wk6 " " wk7 " " wk8 " " wk9 " " wk10 "
+    " wk11 " " wk12 " " wk13 " " wk14 " " wk15 " " wk16 " " wk17 " " wk18 " " wk19 " " wk20 "
+    " wk21 " " wk22 " " wk23 " " wk24 " " wk25 " " wk26 " " wk27 " " wk28 " " wk29 " " wk30 "
+    " wk31 " " wk32 " " wk33 " " wk34 " " wk35 " " wk36 " " wk37 " " wk38 " " wk39 " " wk40 ";
+}
+#main-container {
+  width: 92%;
+  margin: 0 auto 0 auto;
+  grid-template-areas:
+    "title"
+    "nav"
+    "nav"
+    "nav"
+    "nav"
+    "nav"
+    "nav"
+    "year";
+}
+#programming2,
+#data-representation2,
+#algorithms2,
+#investigation2,
+#project3 {
+  display: none;
+}
+
+.dialog {
+  grid-area: year;
+  width: 400px;
+  height: 200px;
+  background-color: rgba(247, 247, 79, 0.95);
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: auto;
+  padding: 10px;
+  z-index: 1000;
+}
+.dialog-title {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.dialog .btn {
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  background-color: lightblue;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px dimgrey;
+  margin: 10px auto 10px auto;
+  text-align: center;
+}
+
+.dialog .btn:hover {
+  cursor: pointer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(4, auto);
+  /* overflow-x: hidden; */
+}
+.hidden {
+  display: none;
+}
+.nav {
+  text-align: center;
+}
+.topic {
+  text-align: center;
+  font-size: 14px;
+}
+.topic:hover,
+.topic:focus,
+.topic:active {
+  cursor: pointer;
+  opacity: 0.5;
+}
+.week {
+  background-color: grey;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 14px;
+}
+.exeat {
+  background-color: lightgoldenrodyellow;
+}
+
+.objectives {
+  grid-area: year;
+  z-index: 1000;
+  background-color: rgba(247, 247, 79, 0.95);
+  border: 1px solid #000;
+  padding: 5px;
+}
+#grid-objectives {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    " .     topLeft   topicT    topicT    topRight close   "
+    " .     navLeft   navMiddle navMiddle  navRight .      "
+    " grd   grd       grd       grd       grd      grd    ";
+  grid-row-gap: 15px;
+}
+.objectives .topic-title {
+  grid-area: topicT;
+  text-align: center;
+}
+.objectives #closeBtn {
+  grid-area: close;
+  text-align: right;
+}
+.objectives #prevBtn {
+  grid-area: topLeft;
+  text-align: left;
+}
+.objectives #nextBtn {
+  grid-area: topRight;
+  text-align: right;
+}
+.objectives .supportBtn {
+  grid-area: navLeft;
+  text-align: right;
+}
+.objectives .mainBtn {
+  grid-area: navMiddle;
+  text-align: center;
+}
+.objectives .extensionBtn {
+  grid-area: navRight;
+  text-align: left;
+}
+.objectives .objectives-area {
+  grid-area: grd;
+}
+.objectives .objectives-grid {
+  display: grid;
+  grid-template-columns: auto;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.objectives .objectives-grid > span:nth-child(-n + 4) {
+  display: none;
+}
+
+.objectives .objectives-grid > span:nth-child(4n + 1)::before {
+  content: "Objective: ";
+  font-weight: bold;
+}
+.objectives .objectives-grid > span:nth-child(4n + 2)::before {
+  content: "KPI: ";
+  font-weight: bold;
+}
+.objectives .objectives-grid > span:nth-child(4n + 3)::before {
+  content: "Resources: ";
+  font-weight: bold;
+}
+.objectives .objectives-grid > span:nth-child(4n)::before {
+  content: "Fun: ";
+  font-weight: bold;
+}
+
+.objectives .objectives-grid > span {
+  padding: 8px 4px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.objectives .btn > :hover {
+  cursor: pointer;
+  color: red;
+}
+
+.objectives .selected {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1900px) {
+  /* 1200px + : Extra large screens, TV */
+  .grid-container {
+    grid-template-columns: repeat(10, 9vw);
+  }
+  .topic,
+  .week {
+    font-size: 18px;
+    line-height: 50px;
+  }
+  #grid-topics-l1 {
+    grid-area: year;
+    grid-template-columns: repeat(10, 9vw);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      " DL    DL    PRG   PRG   PRG   PRG   wk7   wk8   PRG2  PRG2 "
+      " PRG3  PRG3  PRG3  PRG3  PRG3  wk16  DREP   DREP  DREP  DREP   "
+      " DREP2 wk22  FOSIL FOSIL FOSIL FOSIL FOSIL wk28  PROJ2 PROJ2 "
+      " PROJ  PROJ  PROJ  PROJ  wk35  PROJ3 PROJ3 PROJ3 PROJ3 wk40  ";
+  }
+  #grid-topics {
+    grid-area: year;
+    grid-template-columns: repeat(10, 9vw);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      " DL    DL    PRG   PRG   PRG   PRG   wk7   wk8   DREP2 DREP2 "
+      " DREP  DREP  DREP  DREP  DREP  wk16  ALG   ALG   ALG   ALG   "
+      " ALG2  wk22  FOSIL FOSIL FOSIL FOSIL FOSIL wk28  PROJ2 PROJ2 "
+      " PROJ  PROJ  PROJ  PROJ  wk35  PROJ3 PROJ3 PROJ3 PROJ3 wk40  ";
+  }
+  #grid-year {
+    grid-area: year;
+    grid-template-columns: repeat(10, 9vw);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      " wk1   wk2   wk3   wk4   wk5   wk6   wk7   wk8   wk9   wk10 "
+      " wk11  wk12  wk13  wk14  wk15  wk16  wk17  wk18  wk19  wk20 "
+      " wk21  wk22  wk23  wk24  wk25  wk26  wk27  wk28  wk29  wk30 "
+      " wk31  wk32  wk33  wk34  wk35  wk36  wk37  wk38  wk39  wk40 ";
+  }
+  #grid-logo img {
+    width: 8.6vw;
+  }
+  #grid-title {
+    line-height: 5vw; /* img / 2 */
+  }
+  #main-container {
+    grid-template-areas:
+      " logo  title title title title title title title title title "
+      " logo  nav   nav   nav   nav   nav   nav   nav   nav   nav   "
+      " logo  nav   nav   nav   nav   nav   nav   nav   nav   nav   "
+      " year  year  year  year  year  year  year  year  year  year  ";
+  }
+  #data-representation2,
+  #algorithms2,
+  #project3 {
+    display: initial;
+  }
+  #grid-topics-l1 #programming4 {
+    display: none;
+  }
+  #grid-topics-l1 #programming3,
+  #grid-topics-l1 #programming2 {
+    display: initial;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1900px) {
+  /* 1025px - 1900px: Desktops, large screens */
+  .grid-container {
+    grid-template-columns: repeat(9, 10vw);
+  }
+  .topic,
+  .week {
+    font-size: 16px;
+    line-height: 40px;
+  }
+  #grid-topics-l1 {
+    grid-area: year;
+    grid-template-columns: repeat(9, 10vw);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+      " DL    DL    PRG   PRG   PRG   PRG   wk7   wk8   PRG2 "
+      " PRG3  PRG3  PRG3  PRG3  PRG3  PRG3  wk16  DREP2 DREP2 "
+      " DREP  DREP  DREP  wk22  FOSIL FOSIL FOSIL FOSIL FOSIL "
+      " wk28  PROJ  PROJ  PROJ  PROJ  PROJ  PROJ  wk35  PROJ2 "
+      " PROJ3 PROJ3 PROJ3 wk40  .     .     .     .     .    ";
+  }
+  #grid-topics {
+    grid-area: year;
+    grid-template-columns: repeat(9, 10vw);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+      " DL    DL    PRG   PRG   PRG   PRG   wk7   wk8   DREP2 "
+      " DREP  DREP  DREP  DREP  DREP  DREP  wk16  ALG2  ALG2 "
+      " ALG   ALG   ALG   wk22  FOSIL FOSIL FOSIL FOSIL FOSIL "
+      " wk28  PROJ  PROJ  PROJ  PROJ  PROJ  PROJ  wk35  PROJ2 "
+      " PROJ3 PROJ3 PROJ3 wk40  .     .     .     .     .    ";
+  }
+  #grid-year {
+    grid-area: year;
+    grid-template-columns: repeat(9, 10vw);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+      " wk1   wk2   wk3   wk4   wk5   wk6   wk7   wk8   wk9  "
+      " wk10  wk11  wk12  wk13  wk14  wk15  wk16  wk17  wk18 "
+      " wk19  wk20  wk21  wk22  wk23  wk24  wk25  wk26  wk27 "
+      " wk28  wk29  wk30  wk31  wk32  wk33  wk34  wk35  wk36 "
+      " wk37  wk38  wk39  wk40  .     .     .     .     .    ";
+  }
+  #grid-logo img {
+    width: 9.73vw;
+  }
+  #grid-title {
+    line-height: 5vw; /* img / 2 */
+  }
+  #main-container {
+    grid-template-areas:
+      " logo  title title title title title title title title "
+      " logo  nav   nav   nav   nav   nav   nav   nav   nav   "
+      " logo  nav   nav   nav   nav   nav   nav   nav   nav   "
+      " year  year  year  year  year  year  year  year  year  ";
+  }
+  #data-representation2,
+  #algorithms2,
+  #project3 {
+    display: initial;
+  }
+  #grid-topics-l1 #programming4 {
+    display: none;
+  }
+  #grid-topics-l1 #programming3,
+  #grid-topics-l1 #programming2 {
+    display: initial;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* 769px - 1024px: Small screens, laptops */
+  .grid-container {
+    grid-template-columns: repeat(7, 12.85vw);
+  }
+  .topic,
+  .week {
+    font-size: 15px;
+    line-height: 40px;
+  }
+  #grid-topics-l1 {
+    grid-area: year;
+    grid-template-columns: repeat(7, 12.85vw);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+      " DL    DL    PRG   PRG   PRG   PRG   wk7   "
+      " wk8   PRG2  PRG2  PRG2  PRG2  PRG2  PRG2  "
+      " PRG3  wk16  DREP  DREP  DREP  DREP  DREP   "
+      " wk22  FOSIL FOSIL FOSIL FOSIL FOSIL wk28 "
+      " PROJ  PROJ  PROJ  PROJ  PROJ  PROJ  wk35  "
+      " PROJ2 PROJ2 PROJ2 PROJ2 wk40  .     .     ";
+  }
+  #grid-topics {
+    grid-area: year;
+    grid-template-columns: repeat(7, 12.85vw);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+      " DL    DL    PRG   PRG   PRG   PRG   wk7   "
+      " wk8   DREP  DREP  DREP  DREP  DREP  DREP  "
+      " DREP2 wk16  ALG   ALG   ALG   ALG   ALG   "
+      " wk22  FOSIL FOSIL FOSIL FOSIL FOSIL wk28 "
+      " PROJ  PROJ  PROJ  PROJ  PROJ  PROJ  wk35  "
+      " PROJ2 PROJ2 PROJ2 PROJ2 wk40  .     .     ";
+  }
+  #grid-year {
+    grid-area: year;
+    grid-template-columns: repeat(7, 12.85vw);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+      " wk1   wk2   wk3   wk4   wk5   wk6   wk7   "
+      " wk8   wk9   wk10  wk11  wk12  wk13  wk14  "
+      " wk15  wk16  wk17  wk18  wk19  wk20  wk21  "
+      " wk22  wk23  wk24  wk25  wk26  wk27  wk28  "
+      " wk29  wk30  wk31  wk32  wk33  wk34  wk35  "
+      " wk36  wk37  wk38  wk39  wk40  .     .     ";
+  }
+  #grid-logo img {
+    width: 12.45vw;
+  }
+  #grid-title {
+    line-height: 6.5vw; /* img / 2 */
+  }
+  #main-container {
+    grid-template-areas:
+      " logo  title title title title title title "
+      " logo  nav   nav   nav   nav   nav   nav   "
+      " logo  nav   nav   nav   nav   nav   nav   "
+      " year  year  year  year  year  year  year  ";
+  }
+  #data-representation2 {
+    display: initial;
+  }
+  #grid-topics-l1 #data-representation2,
+  #grid-topics-l1 #programming4 {
+    display: none;
+  }
+  #grid-topics-l1 #programming3,
+  #grid-topics-l1 #programming2 {
+    display: initial;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  /* 481px - 768px: iPads, tablets */
+  .grid-container {
+    grid-template-columns: repeat(5, 18vw);
+  }
+  .topic,
+  .week {
+    font-size: 15px;
+    line-height: 40px;
+  }
+  #grid-topics-l1 {
+    grid-area: year;
+    grid-template-columns: repeat(5, 18vw);
+    grid-template-rows: repeat(8, auto);
+    grid-template-areas:
+      " DL    DL    PRG   PRG   PRG   "
+      " PRG2  wk7   wk8   PRG3  PRG3  "
+      " PRG4  PRG4  PRG4  PRG4  PRG4 "
+      " wk16  DREP  DREP  DREP  DREP   "
+      " DREP2 wk22  FOSIL FOSIL FOSIL "
+      " FOS2  FOS2  wk28  PROJ  PROJ  "
+      " PROJ2 PROJ2 PROJ2 PROJ2 wk35  "
+      " PROJ3 PROJ3 PROJ3 PROJ3 wk40  ";
+  }
+  #grid-topics {
+    grid-area: year;
+    grid-template-columns: repeat(5, 18vw);
+    grid-template-rows: repeat(8, auto);
+    grid-template-areas:
+      " DL    DL    PRG   PRG   PRG   "
+      " PRG2  wk7   wk8   DREP  DREP  "
+      " DREP2 DREP2 DREP2 DREP2 DREP2 "
+      " wk16  ALG   ALG   ALG   ALG   "
+      " ALG2  wk22  FOSIL FOSIL FOSIL "
+      " FOS2  FOS2  wk28  PROJ  PROJ  "
+      " PROJ2 PROJ2 PROJ2 PROJ2 wk35  "
+      " PROJ3 PROJ3 PROJ3 PROJ3 wk40  ";
+  }
+  #grid-year {
+    grid-area: year;
+    grid-template-columns: repeat(5, 18vw);
+    grid-template-rows: repeat(8, auto);
+    grid-template-areas:
+      " wk1   wk2   wk3   wk4   wk5  "
+      " wk6   wk7   wk8   wk9   wk10 "
+      " wk11  wk12  wk13  wk14  wk15 "
+      " wk16  wk17  wk18  wk19  wk20 "
+      " wk21  wk22  wk23  wk24  wk25 "
+      " wk26  wk27  wk28  wk29  wk30 "
+      " wk31  wk32  wk33  wk34  wk35 "
+      " wk36  wk37  wk38  wk39  wk40 ";
+  }
+  #grid-logo img {
+    width: 17.6vw;
+  }
+  #grid-title {
+    line-height: 8vw; /* img / 2 */
+  }
+  #main-container {
+    grid-template-areas:
+      " logo  title title title title "
+      " logo  nav   nav   nav   nav   "
+      " logo  nav   nav   nav   nav   "
+      " year  year  year  year  year  ";
+  }
+  #programming2,
+  #data-representation2,
+  #algorithms2,
+  #investigation2,
+  #project3 {
+    display: initial;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  /* Set multi-column common attributes*/
+  .grid-container {
+    grid-row-gap: 5px;
+    grid-column-gap: 0;
+    grid-template-rows: auto;
+    /*grid-auto-flow: row;*/
+  }
+  #grid-logo {
+    display: initial;
+  }
+  #grid-title {
+    grid-area: title;
+  }
+  .nav {
+    /*grid-row-start: 2;*/
+    grid-column-start: auto;
+  }
+  .objectives .objectives-grid {
+    display: grid;
+    grid-template-columns: 3fr min-content 2fr 2fr;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+  }
+  .objectives .objectives-grid > span:nth-child(-n + 4) {
+    display: initial;
+    background-color: green;
+  }
+  .objectives .objectives-grid > span:nth-child(4n + 1)::before {
+    content: "";
+  }
+  .objectives .objectives-grid > span:nth-child(4n + 2)::before {
+    content: "";
+  }
+  .objectives .objectives-grid > span:nth-child(4n + 3)::before {
+    content: "";
+  }
+  .objectives .objectives-grid > span:nth-child(4n)::before {
+    content: "";
+  }
+}
+#digital-literacy {
+  grid-area: DL;
+  background-color: rgba(250, 128, 114, 0.7);
+}
+#programming {
+  grid-area: PRG;
+  background-color: rgba(255, 69, 0, 0.7);
+}
+#programming2 {
+  grid-area: PRG2;
+  background-color: rgba(255, 69, 0, 0.7);
+}
+#programming3 {
+  grid-area: PRG3;
+  background-color: rgba(255, 69, 0, 0.7);
+}
+#programming4 {
+  grid-area: PRG4;
+  background-color: rgba(255, 69, 0, 0.7);
+}
+#project {
+  grid-area: PROJ;
+  background-color: rgba(124, 252, 0, 0.7);
+}
+#project2 {
+  grid-area: PROJ2;
+  background-color: rgba(124, 252, 0, 0.7);
+}
+#project3 {
+  grid-area: PROJ3;
+  background-color: rgba(124, 252, 0, 0.7);
+}
+#investigation {
+  grid-area: FOSIL;
+  background-color: rgba(0, 255, 255, 0.7);
+}
+#investigation2 {
+  grid-area: FOS2;
+  background-color: rgba(0, 255, 255, 0.7);
+}
+#data-representation {
+  grid-area: DREP;
+  background-color: rgba(148, 0, 211, 0.7);
+}
+#data-representation2 {
+  grid-area: DREP2;
+  background-color: rgba(148, 0, 211, 0.7);
+}
+#algorithms {
+  grid-area: ALG;
+  background-color: rgba(65, 105, 225, 0.7);
+}
+#algorithms2 {
+  grid-area: ALG2;
+  background-color: rgba(65, 105, 225, 0.7);
+}
+
+#week-1 {
+  grid-area: wk1;
+}
+#week-2 {
+  grid-area: wk2;
+}
+#week-3 {
+  grid-area: wk3;
+}
+#week-4 {
+  grid-area: wk4;
+}
+#week-5 {
+  grid-area: wk5;
+}
+#week-6 {
+  grid-area: wk6;
+}
+#week-7 {
+  grid-area: wk7;
+}
+#week-8 {
+  grid-area: wk8;
+}
+#week-9 {
+  grid-area: wk9;
+}
+#week-10 {
+  grid-area: wk10;
+}
+#week-11 {
+  grid-area: wk11;
+}
+#week-12 {
+  grid-area: wk12;
+}
+#week-13 {
+  grid-area: wk13;
+}
+#week-14 {
+  grid-area: wk14;
+}
+#week-15 {
+  grid-area: wk15;
+}
+#week-16 {
+  grid-area: wk16;
+}
+#week-17 {
+  grid-area: wk17;
+}
+#week-18 {
+  grid-area: wk18;
+}
+#week-19 {
+  grid-area: wk19;
+}
+#week-20 {
+  grid-area: wk20;
+}
+#week-21 {
+  grid-area: wk21;
+}
+#week-22 {
+  grid-area: wk22;
+}
+#week-23 {
+  grid-area: wk23;
+}
+#week-24 {
+  grid-area: wk24;
+}
+#week-25 {
+  grid-area: wk25;
+}
+#week-26 {
+  grid-area: wk26;
+}
+#week-27 {
+  grid-area: wk27;
+}
+#week-28 {
+  grid-area: wk28;
+}
+#week-29 {
+  grid-area: wk29;
+}
+#week-30 {
+  grid-area: wk30;
+}
+#week-31 {
+  grid-area: wk31;
+}
+#week-32 {
+  grid-area: wk32;
+}
+#week-33 {
+  grid-area: wk33;
+}
+#week-34 {
+  grid-area: wk34;
+}
+#week-35 {
+  grid-area: wk35;
+}
+#week-36 {
+  grid-area: wk36;
+}
+#week-37 {
+  grid-area: wk37;
+}
+#week-38 {
+  grid-area: wk38;
+}
+#week-39 {
+  grid-area: wk39;
+}
+#week-40 {
+  grid-area: wk40;
+}

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Form 3 Route Map</title>
+    <link href="./src/style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="assets/font-awesome-4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Font Awesome pack used for icons- -->
+  </head>
+  <body>
+    <div id="main-container" class="grid-container">
+      <div id="grid-title">Form 3 Route Map</div>
+      <div id="grid-logo" class=""><img src="assets/OakhamLogo.png" /></div>
+      <div class="nav"><a href="lower1.html">Lower 1</a></div>
+      <div class="nav"><a href="index.html">Form 1</a></div>
+      <div class="nav"><a href="form2.html">Form 2</a></div>
+      <div class="nav"><a href="form3.html">Form 3</a></div>
+      <div class="nav"><a href="form4.html">Form 4</a></div>
+      <div class="nav"><a href="form5.html">Form 5</a></div>
+      <div id="grid-year" class="grid-container">
+        <div id="week-1" class="week">&nbsp;</div>
+        <div id="week-2" class="week">&nbsp;</div>
+        <div id="week-3" class="week">&nbsp;</div>
+        <div id="week-4" class="week">&nbsp;</div>
+        <div id="week-5" class="week">&nbsp;</div>
+        <div id="week-6" class="week">&nbsp;</div>
+        <div id="week-7" class="week exeat">half-term</div>
+        <div id="week-8" class="week exeat">half-term</div>
+        <div id="week-9" class="week">&nbsp;</div>
+        <div id="week-10" class="week">&nbsp;</div>
+        <div id="week-11" class="week">&nbsp;</div>
+        <div id="week-12" class="week">&nbsp;</div>
+        <div id="week-13" class="week">&nbsp;</div>
+        <div id="week-14" class="week">&nbsp;</div>
+        <div id="week-15" class="week">&nbsp;</div>
+        <div id="week-16" class="week exeat">Christmas</div>
+        <div id="week-17" class="week">&nbsp;</div>
+        <div id="week-18" class="week">&nbsp;</div>
+        <div id="week-19" class="week">&nbsp;</div>
+        <div id="week-20" class="week">&nbsp;</div>
+        <div id="week-21" class="week">&nbsp;</div>
+        <div id="week-22" class="week exeat">half-term</div>
+        <div id="week-23" class="week">&nbsp;</div>
+        <div id="week-24" class="week">&nbsp;</div>
+        <div id="week-25" class="week">&nbsp;</div>
+        <div id="week-26" class="week">&nbsp;</div>
+        <div id="week-27" class="week">&nbsp;</div>
+        <div id="week-28" class="week exeat">Easter</div>
+        <div id="week-29" class="week">&nbsp;</div>
+        <div id="week-30" class="week">&nbsp;</div>
+        <div id="week-31" class="week">&nbsp;</div>
+        <div id="week-32" class="week">&nbsp;</div>
+        <div id="week-33" class="week">&nbsp;</div>
+        <div id="week-34" class="week">&nbsp;</div>
+        <div id="week-35" class="week exeat">half-term</div>
+        <div id="week-36" class="week">&nbsp;</div>
+        <div id="week-37" class="week">&nbsp;</div>
+        <div id="week-38" class="week">&nbsp;</div>
+        <div id="week-39" class="week">&nbsp;</div>
+        <div id="week-40" class="week exeat">Holiday</div>
+      </div>
+      <div id="grid-topics" class="grid-container">
+        <div id="digital-literacy" class="topic" onclick="showObj('DL')">
+          Digital Literacy
+        </div>
+        <div id="programming" class="topic" onclick="showObj('PRG')">
+          Programming
+        </div>
+        <div id="programming2" class="topic" onclick="showObj('PRG')">&nbsp;</div>
+        <div id="investigation" class="topic" onclick="showObj('HW')">Hardware FOSIL</div>
+        <div id="investigation2" class="topic" onclick="showObj('HW')">&nbsp;</div>
+        <div id="data-representation" class="topic" onclick="showObj('DR')">Data Representation</div>
+        <div id="data-representation2" class="topic" onclick="showObj('DR')">&nbsp;</div>
+        <div id="algorithms" class="topic" onclick="showObj('ALG')">Algorithms</div>
+        <div id="algorithms2" class="topic" onclick="showObj('ALG')">&nbsp;</div>
+        <div id="project" class="topic" onclick="showObj('EOY')">EOY Project</div>
+        <div id="project2" class="topic" onclick="showObj('EOY')">&nbsp;</div>
+        <div id="project3" class="topic" onclick="showObj('EOY')">&nbsp;</div>
+      </div>
+      <div id="not-ready" class="dialog hidden">
+        <div id="nr-title" class="dialog-title"><i class="fa fa-info-circle" aria-hidden="true"></i> Information</div>
+        <div id="nr-msg" class="dialog-message">This scheme of work is still being updated, please check again soon.<br /><br />For now please refer to the old scheme of work at Z:\Computer Science\Schemes </div>
+        <div id="nr-ok" class="btn ok" onclick="closeObj('not-ready')">OK</div>
+      </div>
+      <!--Digital Literacy-->
+      <div id="DL" class="objectives hidden">
+        <div id="grid-objectives">
+          <div id="closeBtn" class="btn" onclick="closeObj('DL')">
+            <i class="fa fa-window-close" aria-hidden="true"></i>
+          </div>
+          <div id="prevBtn" class="btn" onclick="prevObj('DL')">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          </div>
+          <div id="nextBtn" class="btn" onclick="nextObj('DL')">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </div>
+          <div id="DL-supportBtn" class="supportBtn btn" onclick="supportObj('DL')">
+            <span>Support</span>
+          </div>
+          <div id="DL-mainBtn" class="mainBtn btn" onclick="mainObj('DL')">
+            <span>Main<span>
+          </div>
+          <div id="DL-extensionBtn" class="extensionBtn btn" onclick="extensionObj('DL')">
+            <span>Extension<span>
+          </div>
+          <div id="DL-topic-title" class="subtitle topic-title">Digital Literacy - Main</div>
+          <div id="DL-main" class="objectives-area">
+            <div class="objectives-grid">
+              <span><strong>Objective</strong></span>
+              <span><strong>KPI Ref</strong></span>
+              <span><strong>Suggested Resources</strong></span>
+              <span><strong>Fun Ideas</strong></span>
+              <span>Accessing subject content in Microsoft Teams</span>
+              <span>7D1</span>
+              <span>...</span>
+              <span>...</span>
+              <span>Using Class Notebook content library and collaboration space</span>
+              <span>7D2</span>
+              <span>...</span>
+              <span>...</span>
+              <span>Adding content to the user space in Class Notebook</span>
+              <span>7D3</span>
+              <span>...</span>
+              <span>...</span>
+              <span>Accessing Assignments & uploading documents within Microsoft Teams</span>
+              <span>7D4</span>
+              <span>...</span>
+              <span>...</span>
+            </div>
+          </div>
+          <div id="DL-support" class="objectives-area hidden">
+            <div class="objectives-grid">
+              <span><strong>Objective</strong></span>
+              <span><strong>KPI Ref</strong></span>
+              <span><strong>Suggested Resources</strong></span>
+              <span><strong>Fun Ideas</strong></span>
+              <span>Accessing subject content in Microsoft Teams</span>
+              <span>7D1</span>
+              <span>...</span>
+              <span>...</span>
+              <span>Using Class Notebook content library and collaboration space</span>
+              <span>7D2</span>
+              <span>...</span>
+              <span>...</span>
+              <span>Adding content to the user space in Class Notebook</span>
+              <span>7D3</span>
+              <span>...</span>
+              <span>...</span>
+              <span>Accessing Assignments & uploading documents within Microsoft Teams</span>
+              <span>7D4</span>
+              <span>...</span>
+              <span>...</span>
+            </div>
+            </div>
+            <div id="DL-extension" class="objectives-area hidden">
+              <div class="objectives-grid">
+                <span><strong>Objective</strong></span>
+                <span><strong>KPI Ref</strong></span>
+                <span><strong>Suggested Resources</strong></span>
+                <span><strong>Fun Ideas</strong></span>
+                <span>Accessing subject content in Microsoft Teams</span>
+                <span>7D1</span>
+                <span>...</span>
+                <span>...</span>
+                <span>Using Class Notebook content library and collaboration space</span>
+                <span>7D2</span>
+                <span>...</span>
+                <span>...</span>
+                <span>Adding content to the user space in Class Notebook</span>
+                <span>7D3</span>
+                <span>...</span>
+                <span>...</span>
+                <span>Accessing Assignments & uploading documents within Microsoft Teams</span>
+                <span>7D4</span>
+                <span>...</span>
+                <span>...</span>
+              </div>
+            </div>
+        </div>        
+      </div>
+      <!--End of Digital Literacy-->
+      <!--Programming-->
+      <div id="PRG" class="objectives hidden">
+        <div id="grid-objectives">
+          <div id="closeBtn" class="btn" onclick="closeObj('PRG')">
+            <i class="fa fa-window-close" aria-hidden="true"></i>
+          </div>
+          <div id="prevBtn" class="btn" onclick="prevObj('PRG')">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          </div>
+          <div id="nextBtn" class="btn" onclick="nextObj('PRG')">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </div>
+          <div id="PRG-supportBtn" class="supportBtn btn" onclick="supportObj('PRG')">
+            <span>Support</span>
+          </div>
+          <div id="PRG-mainBtn" class="mainBtn btn" onclick="mainObj('PRG')">
+            <span>Main<span>
+          </div>
+          <div id="PRG-extensionBtn" class="extensionBtn btn" onclick="extensionObj('PRG')">
+            <span>Extension<span>
+          </div>
+          <div id="PRG-topic-title" class="subtitle topic-title">Programming - Main</div>
+          <div id="PRG-main" class="objectives-area hidden">
+              <div class="objectives-grid">
+                <span><strong>Objective</strong></span>
+                <span><strong>KPI Ref</strong></span>
+                <span><strong>Suggested Resources</strong></span>
+                <span><strong>Fun Ideas</strong></span>
+                <span>Variables: understand basic data types; <em>String</em> and <em>Integer.</em> Use variables to manipulate data in memory and output the result.</span>
+                <span>9P1</span>
+                <span>...</span>
+                <span>...</span>
+                <span>Decisions: Use comparison operators (< == >) and/or <em>Boolean Logic</em> (and, or, not) with multiple branches and nested decisions</span>
+                <span>9P2</span>
+                <span>...</span>
+                <span>...</span>
+                <span>Iteration: Use <em>while</em> loops (and nested loops) with comparison operators and/or <em>Boolean Logic</em> to repeat a sequence of actions</span>
+                <span>9P3</span>
+                <span>...</span>
+                <span>...</span>
+                <span>Call built-in functions and describe the flow of execution</span>
+                <span>9P5</span>
+                <span>...</span>
+                <span>...</span>
+              </div>
+          </div>
+          <div id="PRG-support" class="objectives-area hidden">
+              <div class="objectives-grid">
+                <span><strong>Objective</strong></span>
+                <span><strong>KPI Ref</strong></span>
+                <span><strong>Suggested Resources</strong></span>
+                <span><strong>Fun Ideas</strong></span>
+                <span>Variables: understand basic data types; <em>String</em> and <em>Integer.</em> Use variables to manipulate data in memory and output the result.</span>
+                <span>9P1</span>
+                <span>...</span>
+                <span>...</span>
+                <span>Decisions: Use comparison operators (< == >) and/or <em>Boolean Logic</em> (and, or, not) with multiple branches</span>
+                <span>9P2</span>
+                <span>...</span>
+                <span>...</span>
+                <span>Iteration: Use a <em>while</em> loop with comparison operators and/or <em>Boolean Logic</em> to repeat a sequence of actions</span>
+                <span>9P3</span>
+                <span>...</span>
+                <span>...</span>
+              </div>
+          </div>
+            <div id="PRG-extension" class="objectives-area hidden">
+                <div class="objectives-grid">
+                  <span><strong>Objective</strong></span>
+                  <span><strong>KPI Ref</strong></span>
+                  <span><strong>Suggested Resources</strong></span>
+                  <span><strong>Fun Ideas</strong></span>
+                  <span>Variables: understand the data types; <em>String</em> and <em>Integer</em> and use 1-d arrays. Use variables and arrays to store and manipulate data in memory and output the result.</span>
+                  <span>9P1</span>
+                  <span>...</span>
+                  <span>...</span>
+                  <span>Decisions: Use comparison operators (< == >) and/or <em>Boolean Logic</em> (and, or, not) with multiple branches and nested decisions</span>
+                  <span>9P2</span>
+                  <span>...</span>
+                  <span>...</span>
+                  <span>Iteration: Use <em>while</em> loops (and nested loops) with comparison operators and/or <em>Boolean Logic</em> to repeat a sequence of actions</span>
+                  <span>9P3</span>
+                  <span>...</span>
+                  <span>...</span>
+                  <span>Iteration: Use <em>for</em> loops appropriately</span>
+                  <span>9P4</span>
+                  <span>...</span>
+                  <span>...</span>
+                  <span>Create and call functions appropriately and describe the effect on the flow of execution</span>
+                  <span>9P5</span>
+                  <span>...</span>
+                  <span>...</span>
+                </div>
+            </div>
+        </div>        
+      </div>
+      <!--End of Programming-->
+      <!--Data Representation-->
+      <div id="DR" class="objectives hidden">
+        <div id="grid-objectives">
+          <div id="closeBtn" class="btn" onclick="closeObj('DR')">
+            <i class="fa fa-window-close" aria-hidden="true"></i>
+          </div>
+          <div id="prevBtn" class="btn" onclick="prevObj('DR')">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          </div>
+          <div id="nextBtn" class="btn" onclick="nextObj('DR')">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </div>
+          <div id="DR-supportBtn" class="supportBtn btn" onclick="supportObj('DR')">
+            <span>Support</span>
+          </div>
+          <div id="DR-mainBtn" class="mainBtn btn" onclick="mainObj('DR')">
+            <span>Main<span>
+          </div>
+          <div id="DR-extensionBtn" class="extensionBtn btn" onclick="extensionObj('DR')">
+            <span>Extension<span>
+          </div>
+          <div id="DR-topic-title" class="subtitle topic-title">Data Representation - Main</div>
+          <div id="DR-main" class="objectives-area hidden">
+              <div class="objectives-grid">
+                <span><strong>Objective</strong></span>
+                <span><strong>KPI Ref</strong></span>
+                <span><strong>Suggested Resources</strong></span>
+                <span><strong>Fun Ideas</strong></span>
+                <span>Define the term <em>character set</em>, using ASCII as an example</span>
+                <span>9R1</span>
+                <span>...</span>
+                <span>...</span>
+                <span>Encode and decode ASCII messages using the binary number system</span>
+                <span>9R2</span>
+                <span>...</span>
+                <span>...</span>
+                <span>Describe why all information is encoded using binary</span>
+                <span>9R3</span>
+                <span>...</span>
+                <span>...</span>
+                <span>Describe the process of digitising sound (sampling air pressure or amplitude over time)</span>
+                <span>9R4</span>
+                <span>...</span>
+                <span>...</span>
+                <span>Encode a given sound sample in binary</span>
+                <span>9R5</span>
+                <span>...</span>
+                <span>...</span>
+              </div>
+            </div>
+          <div id="DR-support" class="objectives-area">
+              <div class="objectives-grid">
+                  <span><strong>Objective</strong></span>
+                  <span><strong>KPI Ref</strong></span>
+                  <span><strong>Suggested Resources</strong></span>
+                  <span><strong>Fun Ideas</strong></span>
+                  <span>Define ASCII as a set of codes for characters</span>
+                  <span>9R1</span>
+                  <span>...</span>
+                  <span>...</span>
+                  <span>Encode and decode ASCII messages using the binary number system</span>
+                  <span>9R2</span>
+                  <span>...</span>
+                  <span>...</span>
+                  <span>Define the binary number system and confidently explain the term <em>place value</em></span>
+                  <span>9R3</span>
+                  <span>...</span>
+                  <span>...</span>
+                  <span>Describe the hardware needed (microphone, diaphram) to digitise sound</span>
+                  <span>9R4</span>
+                  <span>...</span>
+                  <span>...</span>
+                  <span>Encode a given sound sample in binary</span>
+                  <span>9R5</span>
+                  <span>...</span>
+                  <span>...</span>
+                </div>
+            </div>
+            <div id="DR-extension" class="objectives-area hidden">
+                <div class="objectives-grid">
+                    <span><strong>Objective</strong></span>
+                    <span><strong>KPI Ref</strong></span>
+                    <span><strong>Suggested Resources</strong></span>
+                    <span><strong>Fun Ideas</strong></span>
+                    <span>Define the term <em>character set</em> and compare ASCII and Unicode</span>
+                    <span>9R1</span>
+                    <span>...</span>
+                    <span>...</span>
+                    <span>Encode and decode ASCII messages using the binary number system</span>
+                    <span>9R2</span>
+                    <span>...</span>
+                    <span>...</span>
+                    <span>Describe why all information is encoded using binary</span>
+                    <span>9R3</span>
+                    <span>...</span>
+                    <span>...</span>
+                    <span>Describe the process of digitising sound (sampling air pressure or amplitude over time)</span>
+                    <span>9R4</span>
+                    <span>...</span>
+                    <span>...</span>
+                    <span>Encode a given sound sample in binary</span>
+                    <span>9R5</span>
+                    <span>...</span>
+                    <span>...</span>
+                    <span>Describe the effects of sample rate and sample resolution (bit-depth) when digitising sound</span>
+                    <span>9R6</span>
+                    <span>...</span>
+                    <span>...</span>
+                  </div>
+            </div>
+        </div>        
+      </div>
+      <!--End of Data Representation-->
+    </div>
+
+    <script src="./src/interface.js"></script>
+  </body>
+</html>

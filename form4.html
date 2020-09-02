@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Form 4 Route Map</title>
+    <link href="./src/style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="assets/font-awesome-4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Font Awesome pack used for icons- -->
+  </head>
+  <body>
+    <div id="main-container" class="grid-container">
+      <div id="grid-title">Form 4 Route Map</div>
+      <div id="grid-logo" class=""><img src="assets/OakhamLogo.png" /></div>
+      <div class="nav"><a href="lower1.html">Lower 1</a></div>
+      <div class="nav"><a href="index.html">Form 1</a></div>
+      <div class="nav"><a href="form2.html">Form 2</a></div>
+      <div class="nav"><a href="form3.html">Form 3</a></div>
+      <div class="nav"><a href="form4.html">Form 4</a></div>
+      <div class="nav"><a href="form5.html">Form 5</a></div>
+      <div id="grid-year" class="grid-container">
+        <div id="week-1" class="week">&nbsp;</div>
+        <div id="week-2" class="week">&nbsp;</div>
+        <div id="week-3" class="week">&nbsp;</div>
+        <div id="week-4" class="week">&nbsp;</div>
+        <div id="week-5" class="week">&nbsp;</div>
+        <div id="week-6" class="week">&nbsp;</div>
+        <div id="week-7" class="week exeat">half-term</div>
+        <div id="week-8" class="week exeat">half-term</div>
+        <div id="week-9" class="week">&nbsp;</div>
+        <div id="week-10" class="week">&nbsp;</div>
+        <div id="week-11" class="week">&nbsp;</div>
+        <div id="week-12" class="week">&nbsp;</div>
+        <div id="week-13" class="week">&nbsp;</div>
+        <div id="week-14" class="week">&nbsp;</div>
+        <div id="week-15" class="week">&nbsp;</div>
+        <div id="week-16" class="week exeat">Christmas</div>
+        <div id="week-17" class="week">&nbsp;</div>
+        <div id="week-18" class="week">&nbsp;</div>
+        <div id="week-19" class="week">&nbsp;</div>
+        <div id="week-20" class="week">&nbsp;</div>
+        <div id="week-21" class="week">&nbsp;</div>
+        <div id="week-22" class="week exeat">half-term</div>
+        <div id="week-23" class="week">&nbsp;</div>
+        <div id="week-24" class="week">&nbsp;</div>
+        <div id="week-25" class="week">&nbsp;</div>
+        <div id="week-26" class="week">&nbsp;</div>
+        <div id="week-27" class="week">&nbsp;</div>
+        <div id="week-28" class="week exeat">Easter</div>
+        <div id="week-29" class="week">&nbsp;</div>
+        <div id="week-30" class="week">&nbsp;</div>
+        <div id="week-31" class="week">&nbsp;</div>
+        <div id="week-32" class="week">&nbsp;</div>
+        <div id="week-33" class="week">&nbsp;</div>
+        <div id="week-34" class="week">&nbsp;</div>
+        <div id="week-35" class="week exeat">half-term</div>
+        <div id="week-36" class="week">&nbsp;</div>
+        <div id="week-37" class="week">&nbsp;</div>
+        <div id="week-38" class="week">&nbsp;</div>
+        <div id="week-39" class="week">&nbsp;</div>
+        <div id="week-40" class="week exeat">Holiday</div>
+      </div>
+      <div id="grid-topics" class="grid-container">
+        <div id="digital-literacy" class="topic" onclick="showObj('DL')">
+          Digital Literacy
+        </div>
+        <div id="programming" class="topic" onclick="showObj('PRG')">
+          Programming
+        </div>
+        <div id="programming2" class="topic" onclick="showObj('PRG')">
+          &nbsp;
+        </div>
+        <div id="investigation" class="topic" onclick="showObj('HW')">
+          Hardware FOSIL
+        </div>
+        <div id="investigation2" class="topic" onclick="showObj('HW')">
+          &nbsp;
+        </div>
+        <div id="data-representation" class="topic" onclick="showObj('DR')">
+          Data Representation
+        </div>
+        <div id="data-representation2" class="topic" onclick="showObj('DR')">
+          &nbsp;
+        </div>
+        <div id="algorithms" class="topic" onclick="showObj('ALG')">
+          Algorithms
+        </div>
+        <div id="algorithms2" class="topic" onclick="showObj('ALG')">
+          &nbsp;
+        </div>
+        <div id="project" class="topic" onclick="showObj('EOY')">
+          EOY Project
+        </div>
+        <div id="project2" class="topic" onclick="showObj('EOY')">&nbsp;</div>
+        <div id="project3" class="topic" onclick="showObj('EOY')">&nbsp;</div>
+      </div>
+      <div id="not-ready" class="dialog hidden">
+        <div id="nr-title" class="dialog-title">
+          <i class="fa fa-info-circle" aria-hidden="true"></i> Information
+        </div>
+        <div id="nr-msg" class="dialog-message">
+          This scheme of work is still being updated, please check again
+          soon.<br /><br />For now please refer to the old scheme of work at
+          Z:\Computer Science\Schemes
+        </div>
+        <div id="nr-ok" class="btn ok" onclick="closeObj('not-ready')">OK</div>
+      </div>
+    </div>
+
+    <script src="./src/interface.js"></script>
+    <script>
+      showObj("none");
+    </script>
+  </body>
+</html>

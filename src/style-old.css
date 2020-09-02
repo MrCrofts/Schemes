@@ -1,0 +1,297 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+/* Mobile First - 1 column display */
+
+#grid-logo {
+  grid-area: logo;
+  display: none;
+}
+#grid-logo img {
+  width: 9.5vw;
+}
+#grid-title {
+  font-size: 24px;
+  text-align: center;
+  line-height: 40px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(40, auto);
+  /*grid-auto-flow: column;*/
+  overflow-x: hidden;
+}
+.hidden {
+  display: none;
+}
+.nav {
+  text-align: center;
+}
+.nav:hover {
+  cursor: pointer;
+  color: grey;
+}
+.week {
+  background-color: grey;
+  border: 1px solid black;
+  text-align: center;
+}
+
+@media screen and (min-width: 1900px) {
+  /* 1200px + : Extra large screens, TV */
+  .grid-container {
+    grid-template-columns: repeat(10, 8.9vw);
+  }
+  #grid-top {
+    background-color: lightpink;
+    width: 90%;
+    margin: 0 auto 0 auto;
+    grid-template-areas:
+      " logo  title title title title title title title title title "
+      " logo  nav   nav   nav   nav   nav   nav   nav   nav   nav   ";
+  }
+  #grid-logo img {
+    width: 8.6vw;
+  }
+  #grid-title {
+    line-height: 5vw; /* img / 2 */
+    font-size: 30px;
+  }
+  #grid-nav li {
+    /*width: 12.105vw;*/
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1900px) {
+  /* 1025px - 1900px: Desktops, large screens */
+  .grid-container {
+    grid-template-columns: repeat(9, 11vw);
+  }
+  #grid-top {
+    grid-template-areas:
+      " logo  title title title title title title title title "
+      " logo  nav   nav   nav   nav   nav   nav   nav   nav ";
+  }
+  #grid-logo img {
+    width: 10.73vw;
+  }
+  #grid-title {
+    line-height: 5vw; /* img / 2 */
+  }
+  #grid-nav li {
+    width: 12.105vw;
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* 769px - 1024px: Small screens, laptops */
+  .grid-container {
+    grid-template-columns: repeat(8, 12.375vw);
+  }
+  #grid-top {
+    grid-template-areas:
+      " logo  title title title title title title title "
+      " logo  nav   nav   nav   nav   nav   nav   nav  ";
+  }
+  #grid-logo img {
+    width: 12vw;
+  }
+  #grid-nav li {
+    width: 12.105vw;
+    font-size: 18px;
+  }
+  #grid-title {
+    line-height: 6vw; /* img / 2 */
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  /* 481px - 768px: iPads, tablets */
+  .grid-container {
+    grid-template-columns: repeat(7, 14.14vw);
+  }
+  #grid-calendar {
+    grid-template-areas:
+      " wk1   wk2   wk3   wk4   wk5   wk6   wk7   "
+      " wk8   wk9   wk10  wk11  wk12  wk13  wk14  "
+      " wk15  wk16  wk17  wk18  wk19  wk20  wk21  "
+      " wk22  wk23  wk24  wk25  wk26  wk27  wk28  "
+      " wk29  wk30  wk31  wk32  wk33  wk34  wk35  "
+      " wk36  wk37  wk38  wk39  wk40  .     .     ";
+  }
+  #grid-top {
+    grid-template-areas:
+      " logo  title title title title title title "
+      " logo  nav   nav   nav   nav   nav   nav   ";
+  }
+  #grid-logo img {
+    width: 13.74vw;
+  }
+  #grid-nav li {
+    width: 13.7vw;
+    line-height: 30px;
+    font-size: 16px;
+  }
+  #grid-title {
+    line-height: 6.5vw; /* img / 2 */
+  }
+  /* Units */
+  #digital-literacy {
+    grid-row-start: 1;
+    grid-column: 1;
+    text-align: center;
+    background-color: rgba(51, 170, 51, 0.4);
+    z-index: 10;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  /* Set multi-column common attributes*/
+  .grid-container {
+    grid-row-gap: 5px;
+    grid-column-gap: 0;
+    grid-template-rows: auto;
+    /*grid-auto-flow: row;*/
+  }
+  #grid-logo {
+    display: initial;
+  }
+  #grid-nav div {
+    grid-column-start: auto;
+  }
+  #grid-title {
+    grid-area: title;
+  }
+  .nav {
+    grid-row-start: 2;
+    grid-column-start: auto;
+  }
+  .week {
+    grid-column-start: auto;
+  }
+}
+
+#week-1 {
+  grid-area: wk1;
+}
+#week-2 {
+  grid-area: wk2;
+}
+#week-3 {
+  grid-area: wk3;
+}
+#week-4 {
+  grid-area: wk4;
+}
+#week-5 {
+  grid-area: wk5;
+}
+#week-6 {
+  grid-area: wk6;
+}
+#week-7 {
+  grid-area: wk7;
+}
+#week-8 {
+  grid-area: wk8;
+}
+#week-9 {
+  grid-area: wk9;
+}
+#week-10 {
+  grid-area: wk10;
+}
+#week-11 {
+  grid-area: wk11;
+}
+#week-12 {
+  grid-area: wk12;
+}
+#week-13 {
+  grid-area: wk13;
+}
+#week-14 {
+  grid-area: wk14;
+}
+#week-15 {
+  grid-area: wk15;
+}
+#week-16 {
+  grid-area: wk16;
+}
+#week-17 {
+  grid-area: wk17;
+}
+#week-18 {
+  grid-area: wk18;
+}
+#week-19 {
+  grid-area: wk19;
+}
+#week-20 {
+  grid-area: wk20;
+}
+#week-21 {
+  grid-area: wk21;
+}
+#week-22 {
+  grid-area: wk22;
+}
+#week-23 {
+  grid-area: wk23;
+}
+#week-24 {
+  grid-area: wk24;
+}
+#week-25 {
+  grid-area: wk25;
+}
+#week-26 {
+  grid-area: wk26;
+}
+#week-27 {
+  grid-area: wk27;
+}
+#week-28 {
+  grid-area: wk28;
+}
+#week-29 {
+  grid-area: wk29;
+}
+#week-30 {
+  grid-area: wk30;
+}
+#week-31 {
+  grid-area: wk31;
+}
+#week-32 {
+  grid-area: wk32;
+}
+#week-33 {
+  grid-area: wk33;
+}
+#week-34 {
+  grid-area: wk34;
+}
+#week-35 {
+  grid-area: wk35;
+}
+#week-36 {
+  grid-area: wk36;
+}
+#week-37 {
+  grid-area: wk37;
+}
+#week-38 {
+  grid-area: wk38;
+}
+#week-39 {
+  grid-area: wk39;
+}
+#week-40 {
+  grid-area: wk40;
+}
