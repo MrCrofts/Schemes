@@ -30,11 +30,6 @@ a:hover {
 #grid-topics-l1 {
   grid-area: year;
   z-index: 100;
-  grid-template-areas:
-    " DL " " DL " " PRG " " PRG " " PRG " " PRG " " wk7 " " wk8 " " DREP " " DREP "
-    " DREP " " DREP " " DREP " " DREP " " DREP " " wk16 " " ALG " " ALG " " ALG " " ALG "
-    " ALG " " wk22 " " FOSIL " " FOSIL " " FOSIL " " FOSIL " " FOSIL " " wk28 " " PROJ " " PROJ "
-    " PROJ " " PROJ " " PROJ " " PROJ " " wk35 " " PROJ2 " " PROJ2 " " PROJ2 " " PROJ2 " " wk40 ";
 }
 #grid-topics {
   grid-area: year;
@@ -66,6 +61,7 @@ a:hover {
     "nav"
     "nav"
     "nav"
+    "nav"
     "year";
 }
 #programming2,
@@ -73,12 +69,6 @@ a:hover {
 #algorithms2,
 #investigation2,
 #project3 {
-  display: none;
-}
-
-#grid-topics-l1 #programming3,
-#grid-topics-l1 #programming4,
-#grid-topics-l1 #project2 {
   display: none;
 }
 
