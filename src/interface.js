@@ -88,11 +88,23 @@ function prevObj(screen) {
   let display = document.getElementById(screen);
   display.classList.add("hidden");
   switch (screen) {
+    case "DL":
+      display = "EOY";
+      break;
     case "PRG":
       display = "DL";
       break;
     case "DR":
       display = "PRG";
+      break;
+    case "ALG":
+      display = "DR";
+      break;
+    case "HW":
+      display = "ALG";
+      break;
+    case "EOY":
+      display = "HW";
       break;
     default:
       display = null;
@@ -110,6 +122,18 @@ function nextObj(screen) {
       break;
     case "PRG":
       display = "DR";
+      break;
+    case "DR":
+      display = "ALG";
+      break;
+    case "ALG":
+      display = "HW";
+      break;
+    case "HW":
+      display = "EOY";
+      break;
+    case "EOY":
+      display = "DL";
       break;
     default:
       display = null;
